@@ -17,10 +17,11 @@ namespace Labb_1_Grunderna_i_OOP
             this.Pi = Pi;
         }
 
-        public void getArea()
+        public double getArea()
         {
-            double area = Radius * Radius * Pi;
-            Console.WriteLine("Area: " + area);
+            //double area = Radius * Radius * Pi;
+            //Console.WriteLine("Area: " + area);
+            return Radius * Radius * Pi;
         }
         public void getCircumference()
         {
@@ -82,14 +83,16 @@ namespace Labb_1_Grunderna_i_OOP
             Console.WriteLine("Cirkel med 5 i radie: ");
             Circle myCircle = new Circle();
             myCircle.Radius = 5;
-            myCircle.getArea();
+            double area = myCircle.getArea();
+            Console.WriteLine("Area: " + area);
             myCircle.getCircumference();
             myCircle.getVolume();
 
             Console.WriteLine("\nCirkel med 6 i radie: ");
             Circle myCircle2 = new Circle();
             myCircle2.Radius = 6;
-            myCircle2.getArea();
+            area = myCircle2.getArea();
+            Console.WriteLine("Area: " + area);
             myCircle2.getCircumference();
             myCircle2.getVolume();
 
